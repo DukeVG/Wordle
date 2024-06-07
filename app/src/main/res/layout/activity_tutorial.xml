@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bckg">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wordle Game Tutorial"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red: Not the correct word"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
+        android:layout_below="@id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewYellow"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Yellow: Correct word, wrong position"
+        android:textColor="#FFFF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewGreen"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewYellow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Green: Correct word and position"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/viewRed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#FF0000"
+        android:layout_below="@id/textViewGreen"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentStart="true"/>
+
+    <View
+        android:id="@+id/viewYellow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#FFFF00"
+        android:layout_below="@id/textViewGreen"
+        android:layout_toEndOf="@id/viewRed"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"/>
+
+    <View
+        android:id="@+id/viewGreen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00FF00"
+        android:layout_below="@id/textViewGreen"
+        android:layout_toEndOf="@id/viewYellow"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Begin the Game"
+        android:layout_below="@id/viewRed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"/>
+</RelativeLayout>
